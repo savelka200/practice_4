@@ -1,0 +1,63 @@
+body {
+    font-family: Lato;
+    @include font(14px, 17px, 300);
+    font-style: normal;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+
+    @include tablet {
+        width: 93%;
+    }
+
+    @include mobile {
+        width: 93%;
+    }
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &-list{
+        display: flex;
+    }
+
+    &-item {
+        @include font(14px, 17px, 300);
+        text-transform: uppercase;
+    }
+
+    &-link {
+        text-decoration: none;
+        color: $breadcrumb-color;
+
+        &-active {
+            @include font(14px, 17px, 700);
+            color: $dark-pink-color;
+        }
+    }
+
+    &-link:hover {
+        color: $dark-pink-color;
+    }
+}

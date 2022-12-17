@@ -1,0 +1,139 @@
+.product {
+    margin: 0 auto 96px auto;
+
+    @include tablet {
+        margin: 0 auto 65px auto;
+    }
+
+    &__title-section {
+        @include font(30px, 36px, 400);
+        text-align: center;
+        margin-bottom: 6px;
+        color: $black-color;
+    }
+    
+    &__text-section {
+        @include font(14px, 17px, 400);
+        text-align: center;
+        color: $medium-grey-color;
+        margin: 0 auto 48px auto;
+
+        @include tablet {
+            margin: 0 auto 74px auto;
+        }
+
+        @include mobile {
+            margin: 0 auto 65px auto;
+        }
+    }
+    
+    &__button-all {
+        @include font(16px, 19px, 400);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 211px;
+        height: 47px;
+        background: transparent;
+        border: 1px solid $medium-pink-color;
+        color: $all-products-pink-color;
+    
+        &:hover, &:focus {
+            background-color: $dark-pink-color;
+            color: $white-color;
+            cursor: pointer;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        grid-auto-rows: 581px;      
+        margin: 0 0 48px 0;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            margin: 0 0 32px 0;
+            grid-gap: 16px;
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+            margin: 0 0 41px 0;
+            grid-gap: 16px;
+        }
+    }
+    
+    &__item {
+        position: relative;
+
+        &:hover .product__hover, &:focus .product__hover{
+            display: block;
+        }
+    }
+    
+    &__img {
+        width: 100%;
+        height: 420px;
+        display: block;
+
+    }
+    
+    &__hover {
+        display: none;
+        width: 100%;
+        height: 420px;
+        position: absolute;
+        background: $hover-cards-color;
+        top: 0;
+    }
+    
+    &__button {
+        @include font(14px, 17px, 400);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 138px;
+        height: 43px;
+        position: absolute;
+        margin: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: transparent;
+        border: 1px solid $white-color;
+        color: $white-color;
+    }
+    
+    &__button-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        fill: $white-color;
+    }
+    
+    &__description {
+        background: $grey-color;
+        padding: 25px 29px 20px 17px;
+    }
+    
+    &__title {
+        @include font(13px, 16px, 400);
+        text-transform: uppercase;
+        margin-bottom: 13px;
+    }
+    
+    &__text {
+        @include font(14px, 17px, 300);
+        color: $dark-grey-color;
+        margin-bottom: 18px;
+    }
+    
+    &__price {
+        @include font(16px, 19px, 400);
+        color: $dark-pink-color;
+    }
+}

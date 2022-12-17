@@ -1,0 +1,201 @@
+.footer__review {
+    background-image: url(../img/footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &-list {
+        min-height: 448px;
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            width: 81%;
+            flex-direction: column;
+            align-items: center;
+            padding: 53px 0 0 0;
+            height: 693px;
+            justify-content: space-evenly;
+        }
+
+        @include mobile {
+            height: 550px;
+            padding: 0 0 59px 0;
+        }
+    }
+    
+    &-item {
+        max-width: 360px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    &-avatar {
+        margin-bottom: 30px;
+    }
+    
+    &-text {
+        @include font(20px, 24px, 400);
+        text-align: center;
+        color: $aside-black-color;
+
+        @include mobile {
+            @include font(18px, 22px, 400);
+        }
+    }
+    
+    &-title-subscription {
+        @include font(24px, 40px, 700);
+        text-align: center;
+        text-transform: uppercase;
+
+        @include mobile {
+            @include font(24px, 36px, 700);
+        }
+    }
+    
+    &-subscription {
+        @include font(18px, 28px, 400);
+        display: block;
+
+        @include mobile {
+            @include font(14px, 22px, 400);
+        }
+    }
+}
+
+.footer__form-subscription {
+    display: flex;
+    margin-top: 32px;
+}
+
+.footer__input-subscription {
+    padding: 1em;
+    width: 200px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border:none;
+    background: $input-grey-color;
+
+    @include mobile {
+        width: 187px;
+        padding: 1em;
+    }
+
+    &::-webkit-input-placeholder {
+        @include font(14px, 17px, 400);
+        color: $aside-black-color;
+        opacity: 0.67;
+    }
+    &::-webkit-input-placeholder {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    
+    &::-moz-placeholder {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    
+    &:-moz-placeholder {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    
+    &:-ms-input-placeholder {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    
+    &:focus::-webkit-input-placeholder {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    &:focus::-moz-placeholder {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    &:focus:-moz-placeholder {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    &:focus:-ms-input-placeholder {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+}
+
+.footer__button-subscribe {
+    @include font(14px, 17px, 400);
+    background: $footer-button-subscribe-color;
+    border: 1px solid $medium-pink-color;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 1em;
+    color: $white-color;
+
+    @include mobile {
+        padding: 1em;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.footer__social {
+    background: $aside-black-color;
+
+    &-list {
+        display: flex;
+        min-height: 79px;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+
+    &-copyrigh {
+        @include font(16px, 19px, 400);
+        color: $white-color;
+        align-self: center;
+        flex-grow: 1;
+
+        @include mobile {
+            padding: 0 0 9px 0;
+        }
+    }
+
+    &-item {
+        align-self: center;
+        margin-right: 7px;
+    
+        @include mobile {
+            margin: 43px 7px 40px 7px;
+        }
+    }
+
+    &-mobile {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.footer__icon {
+    min-width: 33px;
+    min-height: 33px;
+    padding: 7px;
+    fill: $black-color;
+    background: $white-color;
+
+    &:hover {
+        fill: $white-color;
+        background: $dark-pink-color;
+    }
+}

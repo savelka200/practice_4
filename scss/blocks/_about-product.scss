@@ -1,0 +1,127 @@
+.about-product {
+    background: $white-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -50px auto 0 auto;
+    z-index: 1;
+    border: 1px solid $about-border-color;
+
+    @include tablet {
+        margin: 0;
+    }
+
+    &-box {
+        position: relative;
+        width: 71%;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0 0 128px 0;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            margin: 0 0 64px 0;
+        }
+    }
+
+    &__title {
+        @include font(14px, 17px, 300);
+        color: $dark-pink-color;
+        text-transform: uppercase;
+        margin: 65px auto 27px auto;
+
+        &::after {
+            content: '';
+            width: 63px;
+            height: 3px;
+            background: $about-price-color;
+            position: absolute;
+            top: 93px;
+            left: 47%;
+
+            @include tablet {
+                left: 46%;
+            }
+
+            @include mobile {
+                left: 43%;
+            }
+        }
+    }
+
+    &__sub-title {
+        @include font(18px, 22px, 300);
+        color: $about-subtitle-color;
+        text-transform: uppercase;
+        margin: 0 auto 49px auto;
+    }
+
+    &__text {
+        color: $about-text-color;
+        @include font(14px, 17px, 300);
+        margin: 0 auto 32px auto;
+        text-align: center;
+    }
+
+    &__price {
+        @include font(24px, 29px, 300);
+        color: $about-price-color;
+    }
+
+    &__hr {
+        width: 56%;
+        border: 1px solid $about-border-color;
+        margin: 65px auto 65px auto;
+    }
+
+    &__dropdown {
+        color: black;
+    }
+
+    &__button {
+        text-transform: uppercase;
+        margin: 0 auto 49px auto;
+        color: $menu-grey-color;
+        @include font(14px, 17px, 400);
+
+        @include mobile {
+            @include font (10px, 12px, 400);
+        }
+
+        &-arrow {
+            fill: $menu-grey-color;
+        }
+
+        &:hover .about-product__button-arrow {
+            fill: $dark-pink-color;
+        }
+
+        &-add {
+            display: block;
+            margin: 0 auto 65px auto; 
+            width: 211px;
+            height: 47px;
+            background: transparent;
+            border: 1px solid $medium-pink-color;
+            color: $all-products-pink-color;
+
+            &:hover {
+                background: $dark-pink-color;
+                color: $white-color;          
+            }
+
+            &:hover .about-product__button-icon {
+                fill: white;
+            }
+        }
+
+        &-icon {
+            fill: $about-price-color;
+            margin: 0 23px 0 -23px;
+        }
+    }
+}

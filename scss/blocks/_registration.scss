@@ -1,0 +1,210 @@
+.registration {
+    
+    &__title {
+        background: $pallido-pink-color;
+    
+        &-text {
+            @include font(24px, 29px, 400);
+            min-height: 148px;
+            text-transform: uppercase;
+            color: $dark-pink-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    
+            @include mobile {
+                align-items: center;
+            }
+        }
+    }
+    
+    &__forms {
+        margin: 64px auto 96px auto;
+    
+        @include tablet {
+            width: 96%;
+            margin: 40px auto 96px auto;
+        }
+    
+        @include mobile {
+            margin: 0;
+            margin-top: 40px;
+            width: 100%
+        }
+    }
+    
+    &__legend {
+        @include font(16px, 19px, 300);
+    }
+
+    &__input {
+        padding: 1em;
+        display: block;
+        width: 85%;
+        border: 1px solid $input-registration-color;
+        margin-top: 20px;
+    
+        @include mobile {
+            width: 94%;
+        }
+    
+        &-name::-webkit-input-placeholder {
+            @include font(13px, 16px, 300);
+            color: $input-registration-text-color;
+        }
+    }
+
+    &__sex {
+        margin: 34px 0 35px 0;
+    
+        &-radio {
+            display: none;
+    
+            &:checked + .registration__sex-label::after {
+                display: block;
+            }
+        }
+    
+        &-label {
+            position: relative;
+            margin-left: 46px;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                left: -30px;
+                top: -2px;
+                border: 1px solid $radio-grey-color;
+                border-radius: 50%;
+            }
+            
+            &::after {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                left: -26px;
+                top: 2px;
+                border: 1px solid $footer-button-subscribe-color;
+                border-radius: 50%;
+                background: $medium-pink-color;
+                display: none;
+            }
+        }
+    }
+
+    &__item {
+        width: 57%;
+    
+        @include tablet {
+            width: 49%;
+        }
+    
+        @include mobile {
+            width: 94%;
+        }
+    
+        &-form {
+            width: 57%;
+    
+            @include tablet {
+                width: 49%;
+            }
+    
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+
+    &__form-text {
+        @include font(13px, 16px, 300);
+        color: $input-registration-text-color;
+        margin-top: 15px;
+        width: 92%
+    }
+
+    &__button {
+        @include font(14px, 17px, 400);
+        background: $footer-button-subscribe-color;
+        border: 1px solid $medium-pink-color;
+        text-transform: uppercase;
+        color: $white-color;
+        min-width: 167px;
+        min-height: 50px;
+        margin: 39px auto 0 auto;
+        cursor: pointer;
+    
+        @include mobile {
+            margin: 39px auto 40px auto;
+        }
+    
+        &-arrow {
+            fill: $white-color;
+            margin-left: 20px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    
+        @include mobile {
+            flex-direction: column;
+            margin: 0 auto 100px auto
+        }
+    }
+
+    &__box {
+
+        &-title {
+            @include font(24px, 29px, 300);
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        
+            @include tablet {
+                @include font(16px, 19px, 300);
+                margin-bottom: 32px;
+            }
+        }
+
+        &-list {
+            margin: 0 auto 0 25px;
+        }
+
+        &-text {
+            @include font(24px, 29px, 300);
+            margin-bottom: 20px;
+        
+            @include tablet {
+                @include font(16px, 19px, 300);
+                margin-bottom: 22px;
+            }
+        }
+
+        &-item {
+            @include font(24px, 29px, 300);
+            margin-bottom: 16px;
+            position: relative;
+        
+            @include tablet {
+                @include font(16px, 19px, 300);
+                margin-bottom: 16px;
+            }
+        
+            &::before {
+                content: '';
+                width: 20px;
+                height: 16px;
+                position: absolute;
+                top: 5px;
+                left: -25px;
+                background-repeat: no-repeat;
+                background-image: url(../img/check-mark.svg);
+                background-size: 15px 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.promotion {
+    margin: 0 auto 67px auto;
+
+    @include tablet {
+        width: 96%;
+        margin: 0 auto 154px auto;
+    }
+
+    @include mobile {
+        margin: 0 auto 64px auto;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    &__item {
+        width: 31%;
+        min-height: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 30px 0;
+
+        @include tablet {
+            width: 32%;
+            margin: 0 auto 19px auto;
+        }
+
+        @include mobile {
+            width: 91%;
+            margin: 0 auto 32px auto;
+        }
+    }
+    
+    &__link {
+        text-decoration: none;
+    }
+    
+    &__title {
+        @include font(16px, 19px, 400);
+        text-transform: uppercase;
+        color: $white-color;
+        text-align: center;
+    }
+    
+    &__text {
+        @include font(24px, 29px, 400);
+        text-transform: uppercase;
+        color: $dark-pink-color;
+        text-align: center;
+    }
+    
+    &__item--women {
+        background-image: url("../img/sale-for-women.jpg");
+        background-size: cover;
+    }
+    
+    &__item--man {
+        background-image: url("../img/sale-for-man.jpg");
+        background-size: cover;
+    }
+    
+    &__item--kids {
+        background-image: url("../img/sale-for-kids.jpg");
+        background-size: cover;
+    }
+    
+    &__item--accesories {
+        background-image: url("../img/sale-accesories.jpg");
+        background-size: cover;
+        width: 100%;
+
+        @include tablet {
+            min-height: 116px;
+        }
+
+        @include mobile {
+            min-height: 111px;
+            width: 91%;
+        }
+    }
+}

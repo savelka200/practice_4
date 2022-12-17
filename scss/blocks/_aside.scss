@@ -1,0 +1,47 @@
+.aside {
+    background: $aside-black-color;
+
+    &__list {
+        max-width: 96%;
+        display: flex;
+        align-items: center;
+        min-height: 341px;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            max-width: 53%;
+            padding: 0 0 64px 0;
+        }
+
+        @include mobile {
+            max-width: 93%;
+            padding: 0 0 81px 0;
+        }
+    }
+    
+    &__item {
+        min-width: 31%;
+        text-align: center;
+        margin: 0 10px 0 0;
+
+        @include tablet {
+            margin: 49px 0 0 0;
+        }
+    }
+    
+    &__img {
+        margin-bottom: 25px;
+    }
+    
+    &__title {
+        @include font(20px, 24px, 400);
+        color: $white-color;
+        margin-bottom: 16px;
+    }
+    
+    &__text {
+        @include font(14px, 17px, 300);
+        color: $white-color;
+    }
+}

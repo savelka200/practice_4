@@ -1,0 +1,87 @@
+p, ul, ol{
+  margin-bottom: 0;
+  padding: 0;
+}
+
+a {
+  color: #6F6E6E;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+}
+
+.btn:hover, .btn-secondary:focus {
+  background: transparent;
+  border: none;
+  color: #F16D7F;
+}
+
+.dropdown-toggle::after {
+  display: none;
+  box-shadow: none;
+}
+
+.dropdown-menu {
+  min-width: 10px;
+  padding-right: 30px;
+}
+
+
+
+.carousel {
+  background: #F7F7F7;
+}
+
+.carousel.pointer-event {
+  background: #f7f7f7;
+}
+
+.carousel-inner {
+  width: 46%;
+  margin: 0px 28%;
+  height: auto;
+  padding: 10px 0;
+}
+
+.w-100 {
+  width: 84%;
+}
+
+.carousel-control-prev-icon {
+  color: black;
+  background: rgba(42, 42, 42, 0.15);
+}
+
+.carousel-control-next-icon {
+  background: rgba(42, 42, 42, 0.15);
+}
+
+.carousel-control-next-icon {
+  display: none;
+}
+
+.carousel-control-next::before {
+  background: none;
+  content: '';
+}
+
+.carousel-control-prev::before {
+  background: none;
+  content: '';
+}
+
+.carousel-control-next:hover, .carousel-control-prev:hover {
+  fill: #F16D7F;
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 70%;
+  }
+}

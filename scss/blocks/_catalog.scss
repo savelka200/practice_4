@@ -1,0 +1,260 @@
+.catalog {
+    position: relative;
+
+    &__dropdown {
+        @include font(14px, 17px, 400);
+        color: $menu-grey-color;
+        text-transform: uppercase;
+        position: relative;
+
+        @include mobile {
+            @include font(12px, 14px, 400);
+        }
+
+        &-group {
+            position: relative;
+            display: flex;
+            margin: 51px auto 64px auto;
+
+            @include tablet {
+                justify-content: space-between;
+                margin: 24px auto 40px auto;
+            }
+
+            &-center {
+                display: block;
+                margin: auto;
+
+                @include tablet {
+                    display: flex;
+                    margin: 0;
+                }
+            }
+
+            &-arrow {
+                width: 10px;
+                height: 5px;
+                fill: $menu-grey-color;
+                margin: 0 auto 3px 10px;
+            }
+        }
+
+        &-center {
+            margin: 0 auto 0 20px;
+
+            @include mobile {
+                margin: 0;
+            }
+        }
+
+        &-filter {
+        @include font(14px, 17px, 600);
+            color: $black-color;
+
+            @include mobile {
+                @include font(12px, 14px, 600);
+            }
+
+            &-icon {
+                fill: $black-color;
+                margin: 0 auto 0 11px;
+            }
+
+            &:hover .catalog__dropdown-filter-icon {
+                fill: $about-price-color;
+            }
+
+            &-nav {
+                position: relative;
+                width: 360px;
+                box-shadow: 0 0 20px rgba(122,122,122,0.2);
+            }
+
+            &-list {
+                text-transform: uppercase;
+                color: $about-price-color;
+                @include font (14px, 17px, 400);
+                margin: 24px auto 11px 33px;
+
+                &::before {
+                    content: '';
+                    width: 5px;
+                    height: 37px;
+                    background: $about-price-color;
+                    position: absolute;
+                    left: 17px;
+                    top: 24px;
+                }
+            }
+
+            &-hr {
+                width: 89%;
+                border: 1px solid $menu-grey-color;
+                margin: 0 auto 13px auto;
+            }
+
+            &-item {
+                color: $menu-grey-color;
+                @include font(14px, 17px, 400);
+                margin: 11px auto 0 34px;
+            }
+        }
+
+        &-size {
+
+            &-list {
+                width: 79px;
+                box-shadow: 0 0 20px rgba(122,122,122,0.2);
+            }
+
+            &-item {
+                text-transform: uppercase;
+                color: $menu-grey-color;
+                @include font(14px, 16px, 400);
+                margin: 0 auto 6px 9px;
+            }
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        grid-auto-rows: 581px;      
+        margin: 0 0 48px 0;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            margin: 0 0 32px 0;
+            grid-gap: 16px;
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+            margin: 0 0 41px 0;
+            grid-gap: 16px;
+        }
+    }
+    
+    &__item {
+        position: relative;
+
+        &:hover .catalog__hover, &:focus .catalog__hover{
+            display: block;
+        }
+    }
+    
+    &__img {
+        width: 100%;
+        height: 420px;
+        display: block;
+
+    }
+    
+    &__hover {
+        display: none;
+        width: 100%;
+        height: 420px;
+        position: absolute;
+        background: $hover-cards-color;
+        top: 0;
+    }
+    
+    &__button {
+        @include font(14px, 17px, 400);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 138px;
+        height: 43px;
+        position: absolute;
+        margin: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: transparent;
+        border: 1px solid $white-color;
+        color: $white-color;
+    }
+    
+    &__button-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        fill: $white-color;
+    }
+    
+    &__description {
+        background: $grey-color;
+        padding: 25px 29px 20px 17px;
+    }
+    
+    &__title {
+        @include font(13px, 16px, 400);
+        text-transform: uppercase;
+        margin-bottom: 13px;
+    }
+    
+    &__text {
+        @include font(14px, 17px, 300);
+        color: $dark-grey-color;
+        margin-bottom: 18px;
+    }
+    
+    &__price {
+        @include font(16px, 19px, 400);
+        color: $dark-pink-color;
+    }
+
+    &__pagination {
+        
+        &-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $catalog-hr-color;
+            border-radius: 5px;
+            width: 284px;
+            height: 43px;
+            margin: 0 auto 96px auto;
+
+            @include tablet {
+                margin: 0 auto 63px auto;
+            }
+        }
+
+        &-item {
+            margin: 0 8px;
+
+            &-arrow {
+                margin: 0 15px;
+            }
+        }
+
+        &-link {
+            color: $catalog-hr-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $dark-pink-color;
+            }
+
+            &-active {
+                color: $dark-pink-color;
+            }
+        }
+
+        &-arrow {
+            width: 8px;
+            height: 14px;
+            fill: $black-color;
+
+            :hover {
+                fill: $dark-pink-color;
+                cursor: pointer;
+            }
+        }
+    }
+}
